@@ -1,33 +1,62 @@
 import React from "react";
 import BasicInfo from "./Details/BasicInfo";
-import CollegeImages from "./Details/CollegeImages";
-import CollegeName from "./Details/CollegeName";
-import Link from 'next/link'
+import Connectivity from "./Details/Connectivity";
+import Ranking from "./Details/Ranking";
+import EligibilityCriteria from "./Details/EligibilityCriteria";
+import AdmissionProcess from "./Details/AdmissionProcess";
+import CoursesOffered from "./Details/CoursesOffered";
+import SeatMatrix from "./Details/SeatMatrix";
+import Cuttoff from "./Details/Cuttoff";
+import Alumni from "./Details/Alumni";
+import Fees from "./Details/Fees";
+import FeeWaiver from "./Details/FeeWaiver";
+import Placements from './Details/Placements';
+import Facilities from "./Details/Facilities";
+import Pros from "./Details/Pros";
+import Cons from "./Details/Cons";
+import ReviewVideo from "./Details/ReviewVideo";
+import Faq from "./Details/Faq";
+import Contacts from "./Details/Contacts";
 
 export default function Details({Review}) {
   console.log(Review)
   return (
     <>
-      <CollegeName name={Review.college_name} />
+      <BasicInfo BasicInfo={Review} />
 
-      <CollegeImages/>
+      <Connectivity Review={Review}/>
 
-      <div dangerouslySetInnerHTML={{ __html: Review.review }}></div>
+      <Ranking Review={Review}/>
 
-      <div className="exam-card">
-          <div className="row">
-            <div className="col-lg-10">
-              <h4 className="title">
-                <Link href={`cuttoff/${(Review.slug)}`}>
-                  <a>Cutt off 2020</a>
-                </Link>
-              </h4>
-              <h4 className="title">
-                <a href="">Cutt off 2019</a>
-              </h4>
-            </div>
-          </div>
-        </div>
+      <EligibilityCriteria Review={Review}/>
+
+      <AdmissionProcess Review={Review}/>
+
+      <CoursesOffered Review={Review}/>
+
+      <SeatMatrix Review={Review}/>
+
+      <Cuttoff Review={Review}/>
+
+      <Alumni Review={Review}/>
+
+      <Fees Review={Review}/>
+
+      <FeeWaiver Review={Review}/>
+
+      <Placements Review={Review}/>
+
+      <Facilities Review={Review}/>
+
+      <Pros Review={Review}/>
+
+      <Cons Review={Review}/>
+
+      <ReviewVideo Review={Review}/>
+
+      <Faq Review={Review}/>
+
+      <Contacts Review={Review}/>
       
     </>
   );

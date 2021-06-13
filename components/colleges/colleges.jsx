@@ -84,7 +84,7 @@ const states = [ "Andhra Pradesh",
 const type = ['Govt', 'PPP', 'Private'];
 
 export default function Colleges({Reviews}) {
-  console.log(Reviews);
+  // console.log(Reviews);
     return (
       <section id="colleges" className="section-bg">
 
@@ -115,20 +115,3 @@ export default function Colleges({Reviews}) {
       </section>
     );
 }
-
-
-// export async function getServerSideProps(context) {
-//   const querySnap = await  db.collection('college_review').get()
-  
-//   const Reviews =  querySnap.docs.map(docSnap=>{
-//     return {
-//       ...docSnap.data(),
-//       id:docSnap.id
-//     }
-//   })
-//   console.log(Reviews);
-
-//   return {
-//     props: {Reviews},
-//   }
-// }

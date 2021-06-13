@@ -10,12 +10,35 @@ export default function College({Review}) {
     return (
         <>
         <Header/>
-        <main className="single-college-container section-bg">
+        
+        <main id="collegeHeader" >
+            <img src={Review.featured_image} alt={Review.college_name} />
+            <div className="container">
+                <div className="basicInfoWrapper">
+                        <div className="row justify-content-center">
+                        <div className="col-md-2 text-center logoWrapper">
+                            <img src={Review.logo} alt="" className="logo" />
+                        </div>
+                        <div className="col-md-10">
+                            <div className="row justify-content-center">
+                                <div className="col-12 text-center">
+                                    <h3 className="title">{Review.college_name}</h3>
+                                </div>
+                                <div className="col-12 text-center">
+                                    <div dangerouslySetInnerHTML={{ __html: Review.basic_info }}></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main id="college" className="section-bg">
         <div className="row">
-            <div className="col-lg-9">
+            <div className="col-lg-8">
                 <Details Review={Review}/>
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-4">
                 <Sidebar/>
             </div>
         </div>

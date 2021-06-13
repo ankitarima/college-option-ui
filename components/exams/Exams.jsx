@@ -1,7 +1,8 @@
 import React from "react";
 import Card from "./components/Card";
 
-export default function Exams() {
+export default function Exams({exams}) {
+  console.log(exams)
   return (
     <>
       <section id="exams" className="section-bg">
@@ -13,11 +14,12 @@ export default function Exams() {
           </p>
         </header>
         <div className="row">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          
+          {
+            exams.map((exam)=>(
+              <Card key={exam.id} Exam = {exam}/>
+            ))
+          }
         </div>
       </section>
     </>

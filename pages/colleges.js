@@ -12,7 +12,7 @@ export default function colleges({Reviews}) {
 }
 
 export async function getServerSideProps(context) {
-    const querySnap = await  db.collection('college_review').get()
+    const querySnap = await  db.collection('college_reviews').get()
     
     const Reviews =  querySnap.docs.map(docSnap=>{
       return {

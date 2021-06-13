@@ -888,11 +888,12 @@ section {
 
 #colleges .img img {
   width: 100%;
+  height: 150px;
 }
 
 #colleges .title {
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
   font-size: 18px;
 }
 
@@ -951,6 +952,96 @@ section {
     background-color: #f3c623;
     border-color: #f3c623;
 }
+
+
+/* Colleg Section
+--------------------------------*/
+#collegeHeader{
+  padding-top: 00px;
+}
+#collegeHeader img{
+  width: 100%;
+  max-height: 60vh;
+
+}
+
+#collegeHeader .basicInfoWrapper{
+  padding: 30px 40px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, 0px);
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 30%);
+}
+
+#collegeHeader .logoWrapper{
+  align-self: center;
+}
+
+#collegeHeader .basicInfoWrapper .logo{
+  width: 100px;
+  height: 100px;
+}
+
+#collegeHeader .basicInfoWrapper .title{
+ font-size: 36px;
+ font-weight: 600;
+ text-transform: capitalize;
+}
+
+#college {
+  margin-top: 80px;
+  padding: 40px;
+}
+
+#college .cuttOff{
+  padding: 5px 10px;
+  border: 1px solid;
+  margin-left: 5px;
+}
+
+@media (max-width: 575.98px) {
+
+  #collegeHeader .basicInfoWrapper{
+    padding: 10px 10px;
+    border-radius: 10px;
+    width: 95%;
+    left: 50%;
+    top: 30%;
+  }
+
+  #collegeHeader .basicInfoWrapper .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  #collegeHeader .basicInfoWrapper .title {
+    padding-top: 12px;
+    font-size: 25px;
+  }
+
+  #college {
+    margin-top: 320px;
+  }
+
+}
+
+@media (max-width: 769px){
+
+  #collegeHeader .basicInfoWrapper{
+    padding: 10px 10px;
+    border-radius: 10px;
+    width: 95%;
+    left: 50%;
+    top: 30%;
+  }
+
+}
+
+
 
 
 

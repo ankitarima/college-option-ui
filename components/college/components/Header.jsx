@@ -17,7 +17,7 @@ export default function Header() {
                 </a>
             </li>
             <li>
-              <a className="nav-link scrollto smooth-goto " href="ranking">
+              <a className="nav-link scrollto smooth-goto " href="#ranking">
                 Ranking
               </a>
             </li>
