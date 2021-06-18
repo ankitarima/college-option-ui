@@ -19,7 +19,7 @@ import Faq from "./Details/Faq";
 import Contacts from "./Details/Contacts";
 
 export default function Details({Review}) {
-  console.log(Review)
+  console.log(Review.admission_proccess)
   return (
     <>
       <BasicInfo BasicInfo={Review} />

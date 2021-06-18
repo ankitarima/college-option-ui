@@ -1,35 +1,48 @@
-import React from 'react'
+import React from 'react';
+import { useRouter } from 'next/router';
 
 export default function Cards() {
+  const router = useRouter()
     return (
         <section id="services" className="services section-bg">
         <div className="container">
   
           <div className="row">
   
-            <div className="col-md-6 col-lg-4 wow bounceInUp">
+            <div className="col-md-6 col-lg-4 wow bounceInUp"
+            onClick={() => router.push({
+              pathname: `colleges`,
+              query: { topColleges:true }
+              })} 
+            >
               <div className="box">
                 <div className="icon"><i className="bi bi-briefcase"></i></div>
-                <h4 className="title"><a href="">Top Colleges</a></h4>
-                <p className="description">Best cholleges that can change your life</p>
+                <h4 className="title"><a href="javascript:void(0)">Top Colleges</a></h4>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4">
+            <div className="col-md-6 col-lg-4"
+            onClick={() => router.push({
+              pathname: `exams`,
+              })} 
+            >
               <div className="box">
                 <div className="icon"><i className="bi bi-card-checklist"></i></div>
-                <h4 className="title"><a href="">Dolor Sitema</a></h4>
-                <p className="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                <h4 className="title"><a href="javascript:void(0)">Explore Entrance Exams</a></h4>
               </div>
             </div>
   
-            <div className="col-md-6 col-lg-4">
+            <div className="col-md-6 col-lg-4"
+            onClick={() => router.push({
+              pathname: `colleges`
+              })} 
+            >
               <div className="box">
                 <div className="icon"><i className="bi bi-bar-chart"></i></div>
-                <h4 className="title"><a href="">Sed ut perspiciatis</a></h4>
-                <p className="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                <h4 className="title"><a href="javascript:void(0)">College Reviews</a></h4>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4 wow">
+
+            {/* <div className="col-md-6 col-lg-4 wow">
               <div className="box">
                 <div className="icon"><i className="bi bi-binoculars"></i></div>
                 <h4 className="title"><a href="">Magni Dolores</a></h4>
@@ -38,19 +51,19 @@ export default function Cards() {
             </div>
   
             <div className="col-md-6 col-lg-4">
-          <div className=" box">
-              <div className="icon"><i className="bi bi-brightness-high"></i></div>
-              <h4 className="title"><a href="">Nemo Enim</a></h4>
-              <p className="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <div className=" box">
+                  <div className="icon"><i className="bi bi-brightness-high"></i></div>
+                  <h4 className="title"><a href="">Nemo Enim</a></h4>
+                  <p className="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                </div>
             </div>
-          </div>
           <div className="col-md-6 col-lg-4">
             <div className="box">
               <div className="icon"><i className="bi bi-calendar4-week"></i></div>
               <h4 className="title"><a href="">Eiusmod Tempor</a></h4>
               <p className="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
             </div>
-          </div>
+          </div> */}
   
         </div>
   
