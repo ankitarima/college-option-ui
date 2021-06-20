@@ -4,9 +4,9 @@ import Header from './components/Header';
 import Details from './components/Details';
 import Sidebar from './components/Sidebar';
 
-export default function College({Review}) {
+export default function College({Review,Reviews}) {
     const router = useRouter()
-    console.log(router.query);
+    // console.log(router.query);
     return (
         <>
         <Header/>
@@ -39,7 +39,7 @@ export default function College({Review}) {
                 <Details Review={Review}/>
             </div>
             <div className="col-lg-4">
-                <Sidebar/>
+                <Sidebar Tags={Review.tags} Reviews={Reviews}/>
             </div>
         </div>
         </main>

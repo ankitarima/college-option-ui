@@ -1,17 +1,16 @@
-import React from 'react'
+import React from 'react';
+import db from '../../../firebase/firebase'
 
-export default function Sidebar() {
+export default function Sidebar({Tags,Reviews}) {
+    console.log(Reviews)
+    
+
     return (
         <>
-            <div>
-                <ol>
-                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint accusamus est doloribus? Ad, mollitia illo rem consequuntur illum soluta inventore laborum explicabo vero maiores suscipit quisquam maxime, assumenda a. Pariatur.</li>
-                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint accusamus est doloribus? Ad, mollitia illo rem consequuntur illum soluta inventore laborum explicabo vero maiores suscipit quisquam maxime, assumenda a. Pariatur.</li>
-                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint accusamus est doloribus? Ad, mollitia illo rem consequuntur illum soluta inventore laborum explicabo vero maiores suscipit quisquam maxime, assumenda a. Pariatur.</li>
-                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint accusamus est doloribus? Ad, mollitia illo rem consequuntur illum soluta inventore laborum explicabo vero maiores suscipit quisquam maxime, assumenda a. Pariatur.</li>
-                </ol>
-            </div>
+            <h4 className="mt-4">Related Colleges </h4>
+            <hr />
             
         </>
     )
 }
+
